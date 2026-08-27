@@ -12,7 +12,10 @@ import {
 export const partial = "odysseus";
 
 export default defineRailway(() => {
-  const data = volume("odysseus-data");
+  const data = volume("odysseus-data", {
+    region: "us-west2",
+    sizeMB: 5000,
+  });
 
   const web = service("odysseus", {
     source: github("mic2016z/pewdie_odysseus", { branch: "dev" }),
