@@ -5,8 +5,10 @@ platform-provided `PORT` and the existing `/api/health` liveness endpoint.
 
 ## Required production settings
 
-1. Deploy the repository as a Dockerfile service.
-2. Attach a persistent volume at `/app/data`. This keeps authentication,
+1. Deploy the repository as a Dockerfile service. The checked-in
+   `.railway/railway.ts` file describes the production infrastructure.
+2. Attach a persistent volume at `/app/data` (the infrastructure definition
+   creates it automatically). This keeps authentication,
    settings, API keys, sessions, uploads, and the SQLite database across
    deployments.
 3. Generate a public Railway domain for the service.
