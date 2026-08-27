@@ -27,12 +27,14 @@ export default defineRailway(() => {
       restartPolicyMaxRetries: 10,
     },
     variables: {
+      ALLOWED_ORIGINS: preserve(),
       AUTH_ENABLED: preserve(),
       DATABASE_URL: preserve(),
       LOCALHOST_BYPASS: preserve(),
       ODYSSEUS_ADMIN_PASSWORD: preserve(),
       ODYSSEUS_ADMIN_USER: preserve(),
       ODYSSEUS_DATA_DIR: preserve(),
+      OAUTH_REDIRECT_BASE_URL: preserve(),
       SECURE_COOKIES: preserve(),
     },
     volumeMounts: {

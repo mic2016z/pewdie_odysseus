@@ -20,6 +20,8 @@ platform-provided `PORT` and the existing `/api/health` liveness endpoint.
    SECURE_COOKIES=true
    ODYSSEUS_DATA_DIR=/app/data
    DATABASE_URL=sqlite:////app/data/app.db
+   ALLOWED_ORIGINS=https://your-service.up.railway.app
+   OAUTH_REDIRECT_BASE_URL=https://your-service.up.railway.app
    ```
 
 5. Set `ODYSSEUS_ADMIN_PASSWORD` to a strong first-login password before the
