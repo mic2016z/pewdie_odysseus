@@ -110,4 +110,7 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 EXPOSE 7000
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7000"]
+# Railway injects PORT dynamically. The shell is intentional here because
+# Docker's JSON/exec form does not expand environment variables. Local Docker
+# installs keep using port 7000 when PORT is unset.
+CMD ["/bin/sh", "-c", "exec uvicorn app:app --host 0.0.0.0 --port \"${PORT:-7000}\""]
