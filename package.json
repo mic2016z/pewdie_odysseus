@@ -4,7 +4,7 @@
     "url": "https://github.com/odysseus-dev/odysseus.git"
   },
   "devDependencies": {
-    "@antithesishq/bombadil": "^0.7.0",
+    "@antithesishq/bombadil": "^0.7.2",
     "railway": "^3.11.0"
   }
 }
